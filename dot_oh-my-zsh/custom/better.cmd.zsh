@@ -1,0 +1,17 @@
+## eza: better ls
+alias ls=eza
+alias ll="ls -lh --group-directories-first -s age --color-scale age --color-scale-mode gradient --time-style relative -u"
+
+## dust: better du
+alias du=dust
+
+## dust: better du
+alias du=dust
+
+## rmtrash
+alias del="rmtrash"
+alias trash="rmtrash"
+
+
+# -E 使用现代正则表达式
+alias fd-e='find -E'
