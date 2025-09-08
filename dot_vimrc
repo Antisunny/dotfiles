@@ -8,7 +8,7 @@ filetype off
 
 "" 初始化Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
-  
+
 "" 管理插件
 call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'
@@ -22,7 +22,7 @@ call vundle#begin()
   Plugin 'sainnhe/everforest'
   "" 主题
   Plugin 'folke/tokyonight.nvim'
-call vundle#end() 
+call vundle#end()
 
 filetype plugin indent on
 
