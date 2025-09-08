@@ -1,0 +1,162 @@
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="af-magic"
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# CASE_SENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
+
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# 可用格式 "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+HIST_STAMPS="yyyy-mm-dd"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# 自带插件位置 $ZSH/plugins/
+# 自定义插件位置 $ZSH_CUSTOM/plugins/
+plugins=(git vundle brew emoji rand-quote colored-man-pages)
+
+source $ZSH/oh-my-zsh.sh
+
+## man文档
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# 语言
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+## Homebrew环境变量
+export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_NO_ENV_HINTS=true
+
+## eza: better ls
+alias ls=eza
+alias ll="ls -lh --group-directories-first -s age --color-scale age --color-scale-mode gradient --time-style relative -u"
+
+## dust: better du
+alias du=dust
+
+# PATH
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/Users/apple/.local/bin:$PATH"
+export PATH="/Users/apple/Library/Python/3.9/bin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/Applications/MacVim.app/Contents/bin:$PATH"
+export PATH="~/.bun/bin:$PATH"
+
+# sublime text
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+
+# ssh manager
+. $HOME/.ssh-manager
+
+# homebrew
+#export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+
+# commands
+alias del="rmtrash"
+alias trash="rmtrash"
+# commands 2
+alias finde='find -E'
+alias iina='open -a IINA'
+alias preview='open -a preview'
+alias projects='cd ~/Documents/Projects/'
+alias proj_nuprobe='cd ~/Documents/Projects⌗NuProbe/'
+alias wechat='nohup /Applications/WeChat.app/Contents/MacOS/WeChat &>/dev/null &'
+# https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome
+alias edge_wo_cors='open -na "Microsoft Edge" --user-data-dir=/tmp/temporary-chrome-profile-dir --disable-web-security'
+alias vscode='open -a "Visual Studio Code"'
+
+# Notion
+export NOTION_TOKEN={{ onepasswordRead "op://io652a3em2nuuluyxtj3764htm/Notion Token/password" }}
+
+# commands python
+alias python3-sys='/usr/bin/python3'
+alias pip3-sys='/usr/bin/pip3'
+alias pip3-inst='pip install -i https://pypi.tuna.tsinghua.edu.cn/simple'
+alias pip3-inst-sys2='/usr/bin/pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple'
+alias pip3-inst-sys='/Users/apple/Library/Python/3.9/bin/pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple'
+
+alias zshrc='subl ~/.zshrc'
+
+activate-java() {
+	if [[ "$1" == "11" ]]; then
+		sudo rm /Library/Java/JavaVirtualMachines/openjdk.jdk
+		sudo ln -sfn /usr/local/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+		java --version
+    elif [[ "$1" == "18" ]]; then
+    	sudo rm /Library/Java/JavaVirtualMachines/openjdk.jdk
+		sudo ln -sfn /usr/local/opt/openjdk@18/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+		java --version
+    else
+    	echo "not supported arguent"
+    fi
+}
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# zsh plugins
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# homebrew
+export HOMEBREW_AUTO_UPDATE_SECS=86400
+
+# zoxide
+eval "$(zoxide init zsh --cmd cd)"
+
+# Docker Desktop必须
+fpath=(/Users/apple/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+
+# vim: ft=zsh
