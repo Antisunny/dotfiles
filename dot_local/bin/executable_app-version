@@ -1,0 +1,86 @@
+#!/usr/bin/env python3
+import sys
+import re
+import glob
+import argparse
+import plistlib
+import os.path as pp
+
+
+def is_python_version_version_valid():
+    '''检查python版本是否符合最低要求
+    '''
+    info = sys.version_info
+    if info[0] < 3 or info[1] < 6 or (info[1] == 6 and info[2] < 5):
+        print('the python version is lower than required(at least 3.6.5). you could install python3 via HomeBrew or Installer.', file=sys.stderr)
+        return False
+    return True
+
+def get_application_list():
+    '''获取符合要求的应用列表
+    '''
+    apps = glob.glob('/Applications/*.app')
+    apps.extend(glob.glob('/Applications/*/*.app'))
+    apps.extend(glob.glob('/System/Applications/*.app'))
+    apps.extend(glob.glob('/System/Applications/*/*.app'))
+    # user applications
+    apps.extend(glob.glob('/Users/*/Applications/*.app'))
+    return apps
+
+def get_application_name(path: str, ensure_original: bool=False):
+    '''获取应用名称
+    '''
+    app_n = pp.basename(path)
+    if ensure_original:
+        return app_n[:-4]
+    return app_n[:-4].lower()
+
+def filter_applications_re(apps: list, filter: str):
+    '''依据条件过滤应用
+    '''
+    filter = filter.lower()
+    results = []
+    for app in apps:
+        app_n = get_application_name(app)
+        app_n1 = get_application_name(app, ensure_original=True)
+        if filter in app_n or re.search(filter, app_n):
+            version = get_application_version(app)
+            results.append([app_n1, version, app])
+    return results
+
+def get_application_version(path: str):
+    '''读取版本
+    '''
+    with open(f"{path}/Contents/Info.plist", 'rb') as fp:
+        try:
+            data = plistlib.load(fp)
+        except Exception as e:
+            raise e
+        else:
+            return data['CFBundleShortVersionString']
+
+def parse_cmdl_args(args):
+    '''接触命令行参数
+    '''
+    prog = argparse.ArgumentParser(prog='app-version', add_help=True)
+    prog.add_argument('keyword', nargs='+', help="提供关键词,多个用空格分开")
+
+    argx = prog.parse_args(args)
+    return argx, prog
+
+
+if __name__ == '__main__':
+
+    if not is_python_version_version_valid():
+        exit(0)
+
+    args, prog = parse_cmdl_args(sys.argv[1:])
+    if not len(sys.argv[1:]):
+        prog.print_help()
+
+    apps = get_application_list()
+
+    appl = filter_applications_re(apps, ' '.join(args.keyword))
+
+    for line in appl:
+        print(*line,sep='\t')
