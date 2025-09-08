@@ -1,0 +1,62 @@
+syntax on
+set number
+set background=dark
+
+"" Vundle
+set nocompatible
+filetype off
+
+"" 初始化Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+  
+"" 管理插件
+call vundle#begin()
+  Plugin 'VundleVim/Vundle.vim'
+  "" 主题 gruvbox
+  Plugin 'morhetz/gruvbox'
+  "" 主题 catppuccin
+  Plugin 'catppuccin/nvim', { 'name': 'catppuccin' }
+  "" Rust
+  Plugin 'rust-lang/rust.vim'
+  "" 主题
+  Plugin 'sainnhe/everforest'
+  "" 主题
+  Plugin 'folke/tokyonight.nvim'
+call vundle#end() 
+
+filetype plugin indent on
+
+syntax on
+
+"" 设置当前的主题
+"coloorscheme gruvbox
+
+"" 主题catppuccin
+colorscheme catppuccin-mocha
+"colorscheme catppuccin-frappe
+"colorscheme catppuccin-macchiato
+"colorscheme catppuccin-latte
+
+"" 主题everforest
+"colorscheme everforest
+
+"" 主题tokyonight
+"colorscheme tokyonight-storm
+"colorscheme tokyonight-moon
+"colorscheme tokyonight-day
+"colorscheme tokyonight-night
+
+"" 鼠标、Tab
+set mouse-=a
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+"" macvim
+set guifont=Google\ Sans\ Code:h13
+set linespace=5
+
+"" 选项卡
+set showtabline=2
+
+
