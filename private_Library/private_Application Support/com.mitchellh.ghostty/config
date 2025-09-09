@@ -42,11 +42,22 @@ window-width = 120
 window-save-state = always
 window-new-tab-position = end
 
+background-opacity = 0.96
+background-blur = 25
+
 # 窗口间距
 window-padding-y = 2,4
 window-padding-x = 4,4
+window-padding-balance = true
 
 # 鼠标样式
 cursor-style = block
 cursor-color = FF2600
 cursor-text = FA2600
+
+# 剪贴板
+clipboard-read = allow
+clipboard-write = allow
+# false表示用自动剪贴板，true表示用选择剪贴板
+copy-on-select = false
+clipboard-trim-trailing-spaces = false
