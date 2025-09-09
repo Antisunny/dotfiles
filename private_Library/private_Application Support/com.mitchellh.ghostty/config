@@ -1,0 +1,52 @@
+# 获得所有默认配置项
+# ghostty +show-config --default
+# ghostty +show-config --default --docs
+
+# 每一项的详细解释可以看
+# https://ghostty.org/docs/config/reference
+
+## 主题
+# https://ghostty.org/docs/features/theme
+window-theme = auto
+theme = light:Monokai Pro Light,dark:Monokai Pro
+# theme = light:catppuccin-latte,dark:catppuccin-mocha
+# theme = light:GruvboxLight,dark:GruvboxDark
+# theme = light:tokyonight-day,dark:tokyonight-moon
+
+## 字体
+font-family = "Google Sans Code"
+font-size = 12
+font-feature = -calt, -liga, -dlig
+adjust-cell-height = 20%
+
+# 默认字体比较细
+font-thicken = true
+font-thicken-strength = 50
+bold-is-bright = false
+
+# 更新策略
+auto-update = download
+auto-update-channel = stable
+
+# 会滚
+# 单位byte，设置成1G = 1024 * 1024 * 1024 = 1073741824
+scrollback-limit = 1073741824
+
+# 设置Quick Terminal位置和快捷键
+quick-terminal-position = center
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+
+# 窗口设置
+window-height = 30
+window-width = 120
+window-save-state = always
+window-new-tab-position = end
+
+# 窗口间距
+window-padding-y = 2,4
+window-padding-x = 4,4
+
+# 鼠标样式
+cursor-style = block
+cursor-color = FF2600
+cursor-text = FA2600
