@@ -15,3 +15,7 @@ alias trash="rmtrash"
 
 # -E 使用现代正则表达式
 alias fd-e='find -E'
+
+# lazygit
+alias lg=lazygit
+
