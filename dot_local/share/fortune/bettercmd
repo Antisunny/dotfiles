@@ -1,0 +1,25 @@
+vim: rnu 相对行号
+%
+vim: 系统剪贴板 复制3行 "+3yy 粘贴 "+p
+%
+vim: 自动换行 下gj 上gk
+%
+用hexyl查看二进制文件
+%
+gw要比igv更好用
+%
+git-delta在diff上更好用
+%
+slint+rust是个不错的选择
+%
+字体0xProto、Google Sans Code也挺好用
+%
+xh是比curl、wget更现代的选择
+%
+bat是比cat更好用的选择
+%
+eza是比ls更好用的选择
+%
+dust是比du更好用的选择
+%
+fd是比find更好用的选择
