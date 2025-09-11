@@ -19,3 +19,7 @@ alias fd-e='find -E'
 # lazygit
 alias lg=lazygit
 
+# grep
+alias 'grep-p1'='pcregrep'
+alias 'grep-p2'='pcre2grep'
+
