@@ -49,4 +49,12 @@ regex inline modifiers:
   (?xx: ) PCRE2_EXTENDED_MORE
   以上选择可以组合，如 (?im: )；也可以关闭，如 (?-i: )，同时开关多个，如 (?im-ns: )
 %
-
+python := 绑定操作符
+%
+python 用|和|=合并dict
+%
+python functools.lru_cache 缓存函数
+%
+python 用zip()同时迭代多个列表
+%
+python 用importlib动态导入模块
