@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+# bettercmd hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune/bettercmd" ) | sha256sum }}
+strfile -s {{ joinPath .chezmoi.sourceDir "dot_local/share/fortune/bettercmd" }} ~/.local/share/fortune/bettercmd.dat
+echo strfile bettercmd done
+
+# vim: ft=bash
