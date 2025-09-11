@@ -1,6 +1,6 @@
 ## eza: better ls
 alias ls=eza
-alias ll="ls -lh --group-directories-first -s age --color-scale age --color-scale-mode gradient --time-style relative -u"
+alias ll="ls -lh --group-directories-first -s modified --color-scale modified --color-scale-mode gradient --time-style relative -m"
 alias la='ll -a'
 
 ## dust: better du
@@ -20,6 +20,7 @@ alias fd-e='find -E'
 alias lg=lazygit
 
 # grep
-alias 'grep-p1'='pcregrep'
-alias 'grep-p2'='pcre2grep'
+alias 'grep.p1'='pcregrep'
+
+alias 'grep.p2'='pcre2grep'
 
