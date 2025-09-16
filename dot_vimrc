@@ -59,4 +59,4 @@ set linespace=5
 "" 选项卡
 set showtabline=2
 
-
+" vim: ft=vim
