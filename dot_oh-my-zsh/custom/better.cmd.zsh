@@ -21,6 +21,13 @@ alias lg=lazygit
 
 # grep
 alias 'grep.p1'='pcregrep'
-
 alias 'grep.p2'='pcre2grep'
 
+# sudo
+alias please='sudo'
+
+# ps
+alias ps="procs"
+
+# 生成随机密码
+alias pwgen="/usr/local/bin/pwgen -cnys -C 32 1"
