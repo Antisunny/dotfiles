@@ -2,6 +2,23 @@
 
 # bettercmd hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune/bettercmd" ) | sha256sum }}
 strfile -s {{ joinPath .chezmoi.sourceDir "dot_local/share/fortune/bettercmd" }} ~/.local/share/fortune/bettercmd.dat
-echo strfile bettercmd done
 
-# vim: ft=bash
+# bioinfo hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune/bioinfo" ) | sha256sum }}
+strfile -s {{ joinPath .chezmoi.sourceDir "dot_local/share/fortune/bioinfo" }} ~/.local/share/fortune/bioinfo.dat
+
+# font hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune/font" ) | sha256sum }}
+strfile -s {{ joinPath .chezmoi.sourceDir "dot_local/share/fortune/font" }} ~/.local/share/fortune/font.dat
+
+# git hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune/git" ) | sha256sum }}
+strfile -s {{ joinPath .chezmoi.sourceDir "dot_local/share/fortune/git" }} ~/.local/share/fortune/git.dat
+
+# lang_python hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune/lang_python" ) | sha256sum }}
+strfile -s {{ joinPath .chezmoi.sourceDir "dot_local/share/fortune/lang_python" }} ~/.local/share/fortune/lang_python.dat
+
+# regex hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune/regex" ) | sha256sum }}
+strfile -s {{ joinPath .chezmoi.sourceDir "dot_local/share/fortune/regex" }} ~/.local/share/fortune/regex.dat
+
+# vim hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune/vim" ) | sha256sum }}
+strfile -s {{ joinPath .chezmoi.sourceDir "dot_local/share/fortune/vim" }} ~/.local/share/fortune/vim.dat
+
+# vim: ft=go-template

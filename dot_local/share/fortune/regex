@@ -1,0 +1,24 @@
+regex: Lookbehind (?<= ) (?<! ) Lookahead (?= ) (?! ) Not capturing (?: )
+%
+pcre2grep/pcregrep比grep更好用 grep-p1/grep-p2
+%
+regex命名捕获 (?<name> ) (?P<name> ) (?'name' )
+%
+regex命名反向引用:
+  Perl \k<name> \k'name' \g{name}
+  Python: (?P=name)
+  .NET \k{name} pcre2也都支持
+%
+regex数字反向引用:
+  \n n表示一个数字
+  \gn \g+n \g-n
+  \g{n} \g{+n} \g{-n}
+%
+regex inline modifiers:
+  (?i: ) PCRE2_CASELESS
+  (?m: ) PCRE2_MULTILINE
+  (?n: ) PCRE2_NO_AUTO_CAPTURE
+  (?s: ) PCRE2_DOTALL
+  (?x: ) PCRE2_EXTENDED
+  (?xx: ) PCRE2_EXTENDED_MORE
+  以上选择可以组合，如 (?im: )；也可以关闭，如 (?-i: )，同时开关多个，如 (?im-ns: )
