@@ -30,4 +30,4 @@ alias please='sudo'
 alias ps="procs"
 
 # 生成随机密码
-alias pwgen="/usr/local/bin/pwgen -cnys -C 32 1"
+alias pwgen32="/usr/local/bin/pwgen -cnyBs -C 32 1"
