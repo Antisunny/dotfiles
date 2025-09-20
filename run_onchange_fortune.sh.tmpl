@@ -21,4 +21,7 @@ strfile -s {{ joinPath .chezmoi.sourceDir "dot_local/share/fortune/regex" }} ~/.
 # vim hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune/vim" ) | sha256sum }}
 strfile -s {{ joinPath .chezmoi.sourceDir "dot_local/share/fortune/vim" }} ~/.local/share/fortune/vim.dat
 
+# lang_bash hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune/lang_bash" ) | sha256sum }}
+strfile -s {{ joinPath .chezmoi.sourceDir "dot_local/share/fortune/lang_bash" }} ~/.local/share/fortune/lang_bash.dat
+
 # vim: ft=go-template

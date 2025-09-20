@@ -7,3 +7,24 @@ python functools.lru_cache 缓存函数
 python 用zip()同时迭代多个列表
 %
 python 用importlib动态导入模块
+%
+用polars替代很慢的pandas
+%
+python 用dataclasses简化类定义
+%
+python 用pathlib处理路径
+%
+python 用click、typer代替argparse处理命令行参数
+%
+python 用rich美化终端输出
+%
+python 用httpx替代requests
+%
+python 用pydantic简化数据验证和设置
+%
+用uv来管理python项目，uv add安装依赖
+%
+python 用ruff格式化代码
+%
+用loguru代替logging用于日志记录
+%

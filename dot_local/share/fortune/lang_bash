@@ -1,0 +1,86 @@
+${#VAR} 字符串长度
+等同于expr length $string、expr "$string" : '.*'
+%
+case "$VAR" in
+    VAL1) statements;;
+    VAL2) statements;;
+esac
+%
+. filepath 等于 source filepath
+%
+unset删除变量；未初始化是null值，用[ -z $VAR ]判断
+%
+赋值 a=5+4 或 let a=5+4
+%
+$(commands) 或 `commands` 命令替换
+%
+$((expression)) 算术扩展
+%
+bash: 字符串替换
+${VAR/pattern/replacement} 匹配第一个
+${VAR/#pattern/replacement} 从头匹配第一个
+${VAR/%pattern/replacement} 从尾匹配第一个
+${VAR//pattern/replacement} 匹配全部
+%
+bash: 删除部分字符串
+从头找：${VAR#pattern} 删除最短匹配前缀 ${VAR##pattern} 最长
+从尾找：${VAR%pattern} 删除最短匹配后缀 ${VAR%%pattern} 最长
+%
+$0 脚本名 $1 $2 ... 位置参数
+$* $@ 所有位置参数；$# 位置参数个数
+shift 左移参数列表
+%
+$? 上一个命令的退出状态；$$ 当前脚本的进程ID
+%
+bash：[  ] 等同于test命令
+[[  ]] 拓展的[  ]，支持&&、||、<、>等
+%
+((  )) 加减乘除（+=*/），大于小于等于（<=/</>/>=）
+%
+-e 文件存在 -s 文件大小0
+-f 文件 -d 目录
+-b 块设备 -c 字符设备 -p 管道设备 -S 套接字 -t 终端
+-h/-L 符号链接
+-r -w -x 读写执行
+-g 设置了sgid -u 设置了suid -k 设置了粘滞位
+-O 当前用户是文件拥有者 -G 当前用户在文件组中
+A -nt B 文件A比文件B新 -ot 比老
+-ef 硬链接到同个文件
+%
+[  ]中-eq/-ne/-gt/-ge/-lt/-le比较
+%
+-z 空字符串 -n 非null（初始化了）
+%
+[  ]中-a/-o 和 [[  ]]中&&/||相同
+%
+[ $var = val ] 若A/B不加"，则A和B会发生文件匹配和字符分割
+[ "$var" = "val" ] 等于 [[ $var == "val" ]]
+[[ $var == val ]] 若val中有通配符，则会匹配
+%
+[  ]中</<=/>/>=比较ASCII
+%
+bash：let "z=5**3"、let "z+=5"
++=、-=、*=、/=、%=
+%
+bash: 子字符串
+${string:position} ${string:position:length}
+expr substr $string $position $length
+expr match "$string" '\($regex\)'
+expr "$string" : '\($regex\)'
+%
+bash: 默认值
+${var-default} ${var:-default}
+${var=default} ${var:=default}
+%
+bash: var不null则用alt_value
+${var+alt_value} ${var:+alt_value}
+%
+bash: var是null则显示err_msg且$?=1
+${var?err_msg} ${var:?err_msg}
+%
+bash: 声明过的变量集合
+${!varprefix*} 上下文中前缀是varprefix的所有变量的值
+%
+bash: 循环
+for的list有通配符时会遍历
+break、continue

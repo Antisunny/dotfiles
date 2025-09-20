@@ -1,0 +1,17 @@
+rust中用poem写网站
+%
+rust中用diesel来ORM数据库
+%
+rust中用clap来解析命令行参数
+%
+rust中用anyhow来处理错误
+%
+rust中用serde来处理json、toml、yaml等
+%
+rust中用Rayon的多核处理.par_iter()
+%
+rust中用tokio来做异步编程
+%
+rust中用reqwest来做http请求
+%
+Axum框架是基于tokio、Tower、Hyper的异步web框架
