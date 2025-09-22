@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "**/dot_local/share/fortune_modules/*": "plaintext",
+        "**/*.tmpl": "go-template"
+    }
+}
