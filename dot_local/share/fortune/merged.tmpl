@@ -1,0 +1,10 @@
+{{- $files := glob (joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/*") -}}
+{{- range $i, $file := $files -}}
+    {{- if not (hasSuffix ".tmpl" $file) -}}
+        {{- include $file -}}
+    {{- end -}}
+
+    {{- if lt (add $i 1) (len $files) }}
+%
+    {{- end }}
+{{ end -}}
