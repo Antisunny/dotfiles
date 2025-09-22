@@ -1,0 +1,16 @@
+实地替换：sed -i 's/old/new/g' file.txt
+实地替换，备份到.bak文件：sed -i.bak 's/foo/bar/g' file.txt
+%
+全局替换：sed -e 's/old/new/g' file.txt
+只替换第5行中的：sed '5s/old/new/' file.txt
+只替换第2个匹配：sed 's/old/new/2' file.txt
+从第2个匹配开始替换：sed 's/old/new/2g' file.txt
+%
+只打印5-8行：sed -n '5,8p' file.txt
+删除2-5行：sed '2,5d' file.txt
+%
+只打印匹配行：sed -n '/pattern/p' file.txt
+删除匹配行：sed '/pattern/d' file.txt
+%
+第2行前插入：sed '2i\text' file.txt
+第2行后插入：sed '2a\text' file.txt
