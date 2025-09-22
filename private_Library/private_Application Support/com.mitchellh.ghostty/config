@@ -5,7 +5,7 @@
 # 每一项的详细解释可以看
 # https://ghostty.org/docs/config/reference
 
-## 主题
+# 主题
 # https://ghostty.org/docs/features/theme
 window-theme = system
 theme = light:Monokai Pro Light,dark:Monokai Pro
@@ -13,11 +13,15 @@ theme = light:Monokai Pro Light,dark:Monokai Pro
 # theme = light:GruvboxLight,dark:GruvboxDark
 # theme = light:tokyonight-day,dark:tokyonight-moon
 
-## 字体
+# 字体
 font-family = "Google Sans Code"
 font-size = 12
 font-feature = -calt, -liga, -dlig
 adjust-cell-height = 20%
+
+# 用更亮代替粗体
+font-style-bold = false
+# bold-is-bright = true
 
 # 默认字体比较细
 font-thicken = true
@@ -28,7 +32,7 @@ bold-is-bright = false
 auto-update = download
 auto-update-channel = stable
 
-# 会滚
+# 回滚
 # 单位byte，设置成1G = 1024 * 1024 * 1024 = 1073741824
 scrollback-limit = 1073741824
 
@@ -61,3 +65,5 @@ clipboard-write = allow
 # false表示用自动剪贴板，true表示用选择剪贴板
 copy-on-select = false
 clipboard-trim-trailing-spaces = false
+
+# vim: fp=toml
