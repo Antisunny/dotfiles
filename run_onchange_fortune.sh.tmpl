@@ -1,18 +1,10 @@
 #!/bin/zsh
 
-# bettercmd hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/bettercmd" ) | sha256sum }}
-# bioinfo hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/bioinfo" ) | sha256sum }}
-# chezmoi hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/chezmoi" ) | sha256sum }}
-# cmd_sed hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/cmd_sed" ) | sha256sum }}
-# font hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/font" ) | sha256sum }}
-# git hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/git" ) | sha256sum }}
-# lang_bash hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/lang_bash" ) | sha256sum }}
-# lang_python hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/lang_python" ) | sha256sum }}
-# lang_rust hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/lang_rust" ) | sha256sum }}
-# lang_web hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/lang_web" ) | sha256sum }}
-# regex hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/regex" ) | sha256sum }}
-# ui_apps hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/ui_apps" ) | sha256sum }}
-# vim hash: {{ include ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/vim" ) | sha256sum }}
+
+{{ $files := glob ( joinPath .chezmoi.sourceDir "dot_local/share/fortune_modules/*" ) }}
+{{ range $file := $files }}
+# {{ base $file }} hash: {{ include $file | sha256sum }}
+{{ end }}
 strfile -i -r -s "$HOME/.local/share/fortune/merged" "$HOME/.local/share/fortune/merged.dat"
 
 # vim: ft=go-template

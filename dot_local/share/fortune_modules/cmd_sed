@@ -14,3 +14,6 @@
 %
 第2行前插入：sed '2i\text' file.txt
 第2行后插入：sed '2a\text' file.txt
+%
+同时执行多个任务
+sed -e 's/foo/bar/g' -e '/baz/d' file.txt

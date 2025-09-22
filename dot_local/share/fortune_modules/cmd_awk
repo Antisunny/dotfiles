@@ -1,0 +1,66 @@
+打印匹配的行：awk '/error/ {print}' logfile.txt
+打印两个匹配之间的行：awk '/START/,/END/' file.txt
+%
+多少行：awk 'END {print NR}' file.txt
+%
+awk '$3 > 100' file.txt
+打印第3列大于100的行
+awk '$2 == "manager"' file.txt
+打印第2列是manager的行
+%
+awk '{sum += $2} END {print sum}' file.txt
+计算第2列的和
+awk '{sum += $2; count++} END {print sum/count}' file.txt
+计算第2列的平均数
+%
+指定列分隔符
+用逗号：awk -F, '{print $1, $3}' data.csv
+用匹配：awk -F '[ ]+' '{print $1, $3}' file.txt
+%
+设置输出列分隔符
+awk 'BEGIN {OFS=" - "} {print $1, $2}' file.txt
+%
+使用变量
+awk -v threshold=50 '$2 > threshold' file.txt
+%
+使用关联数组去重
+awk '!seen[$0]++' file.txt
+%
+定义关联数组，键可以是整数、字符串
+dict["apple"] = 3
+dict["banana"] = 5
+arr[1] = "hello"
+arr[2] = "world"
+
+存在 if (key in arr)
+删除 delete dict["apple"]
+遍历 for (key in dict) {}
+%
+标准awk支持 arr[1,2] 多维
+gawk支持 a[1][1] 多维
+%
+awk特殊变量：
+FS OFS 列分隔符 RS ORS 行分隔符
+NF 当前行的列数
+NR 已处理的行数 FNR 文件行数
+$1, $2, … $NF 第几列
+
+FILENAME 文件名 ARGC 参数个数 ARGV 参数数组
+%
+awk特殊变量2：
+保留小数位：CONVFMT "%.6g"
+输出保留小数位 OFMT "%.6g"
+固定宽度用 FIELDWIDTHS 10,8,20
+IGNORECASE 正则、字符串比较是不区分大小写
+%
+awk特殊变量3：
+PROCINFO 进程信息
+  键"sorted_in" 确保关联数组顺序，如 "@ind_num_asc"
+  格式 @
+       ind/val 二选一
+       _
+       num/str/type 三选一
+       _
+       asc/desc 二选一
+%
+awk删除某个字段：awk '{ $1=""; print $0 }'
