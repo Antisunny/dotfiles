@@ -1,5 +1,31 @@
-vim: rnu 相对行号
+<vim> rnu 相对行号
 %
-vim: 系统剪贴板 复制3行 "+3yy 粘贴 "+p
+<vim> 系统剪贴板 "+yy 粘贴 "+p 拷贝三行 "+3yy；Windows、macOS中"* "+等同，Linux中不同
+
+set cb=unnamedplus 使用系统剪贴板
+
+"" unnamed register 默认；"* selection(PRIMARY) register；"+ Clipboard register
 %
-vim: 自动换行中 下gj 上gk
+<vim>
+上下左右：kjhl
+自动换行中 上gk 下gj
+
+w 下一个单词开头 b 上一个单词开头
+0 行首 $ 行尾 ^ 非空行首
+gg 第一行 G 最后一行
+%
+<vim>
+i 光标前插入 a 光标后插入
+o 下一行插入 O 上一行插入
+
+x 删除光标下字符 dd 删除当前行
+yy 拷贝当前行 p 光标后粘贴 P 光标前粘贴
+%
+<vim>
+u 撤销上一个更改
+Ctrl+r redo
+%
+<vim> / 正向搜索 ? 反向搜索 n 下一个匹配 N 上一个匹配
+%
+<vim> 开始visual selection
+v 字符选择 V 行选择 Ctrl+v 块选择

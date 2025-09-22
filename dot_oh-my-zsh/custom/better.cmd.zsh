@@ -1,4 +1,5 @@
 ## eza: better ls
+alias l=ls
 alias ls=eza
 alias ll="ls -lh --group-directories-first -s modified --color-scale modified --color-scale-mode gradient --time-style relative -m"
 alias la='ll -a'
@@ -25,6 +26,7 @@ alias 'grep.p2'='pcre2grep'
 
 # sudo
 alias please='sudo'
+alias pls='sudo'
 
 # ps
 alias ps="procs"
