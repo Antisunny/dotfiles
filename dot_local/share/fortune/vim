@@ -2,4 +2,4 @@ vim: rnu 相对行号
 %
 vim: 系统剪贴板 复制3行 "+3yy 粘贴 "+p
 %
-vim: 自动换行 下gj 上gk
+vim: 自动换行中 下gj 上gk

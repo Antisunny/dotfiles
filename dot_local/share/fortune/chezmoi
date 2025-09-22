@@ -1,0 +1,3 @@
+sprig扩充的hasSuffix参数列表: 1 suffix 2 text
+%
+`.chezmoi.sourceDir`是git目录

@@ -14,4 +14,4 @@ rust中用tokio来做异步编程
 %
 rust中用reqwest来做http请求
 %
-Axum框架是基于tokio、Tower、Hyper的异步web框架
+axum框架是基于tokio、Tower、Hyper的异步web框架
