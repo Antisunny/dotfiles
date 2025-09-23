@@ -1,6 +1,5 @@
 syntax on
 set number
-set background=dark
 
 "" Vundle
 set nocompatible
@@ -22,17 +21,30 @@ call vundle#begin()
   Plugin 'sainnhe/everforest'
   "" 主题
   Plugin 'folke/tokyonight.nvim'
+  "" 自动白天黑夜模式
+  Plugin 'nburns/vim-auto-light-dark'
 call vundle#end()
 
 filetype plugin indent on
 
 syntax on
 
-"" 设置当前的主题
-"coloorscheme gruvbox
+" 使用vim-auto-light-dark插件实现自动切换主题
+function! DarkMode()
+    set background=dark
+    colorscheme catppuccin-mocha
+endfunction
+
+function! LightMode()
+    set background=light
+    colorscheme catppuccin-latte
+endfunction
+
+"" 主题gruvbox
+"colorscheme gruvbox
 
 "" 主题catppuccin
-colorscheme catppuccin-mocha
+"colorscheme catppuccin-mocha
 "colorscheme catppuccin-frappe
 "colorscheme catppuccin-macchiato
 "colorscheme catppuccin-latte
@@ -59,4 +71,4 @@ set linespace=5
 "" 选项卡
 set showtabline=2
 
-" vim: ft=vim
+" vim: ft=vim tabstop=4 shiftwidth=4 expandtab

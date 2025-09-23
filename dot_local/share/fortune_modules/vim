@@ -7,7 +7,7 @@ set cb=unnamedplus 使用系统剪贴板
 "" unnamed register 默认；"* selection(PRIMARY) register；"+ Clipboard register
 %
 <vim>
-上下左右：kjhl
+上下左右：kjhl；屏幕头中尾：H M L
 自动换行中 上gk 下gj
 
 w 下一个单词开头 b 上一个单词开头
