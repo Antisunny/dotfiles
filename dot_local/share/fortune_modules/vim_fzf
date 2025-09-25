@@ -1,0 +1,38 @@
+<vim-fzf>
+:Files [PATH] 相当于文件管理器
+:Windows 所有窗口
+:Buffers 所有Buffer
+:Commands 命令列表
+:Colors 主题列表
+:Filetypes 文件类型列表
+:Maps Normal模式的键盘映射
+%
+<vim-fzf> 历史记录
+:History  列表：以往打开过的文件，以及打开的Buffer们
+:History: 历史列表:所有命令
+:History/ 历史列表:搜索
+%
+<vim-fzf> 搜索
+:Locate PATTERN 输出locate命令结果
+:Ag 用the_silver_seacher搜索
+:Rg 用ripgrep搜索
+:RG 用ripgrep搜索，每次按键都重新调用ripgrep
+:Lines [QUERY] 在加载的Buffer中找到匹配QUERY的行，并提供这些行的快速切换列表，enter jump
+:BLines [QUERY]
+%
+<vim-fzf> 标记和跳转
+:Tags [PREFIX] 当前项目中的，等同于执行ctags -R
+:BTags [QUERY] 当前Buffer中的
+:Changes 更改过内容的行
+:Marks 用户标记的位置列表
+:BMarks 当前Buffer中的
+:Jumps 用户跳转过的行的列表
+%
+<vim-fzf> <git>
+:GFiles [OPTS] 运行git ls-files
+:GFiles? 运行git status
+:Commits [LOG_OPTS] 要插件fugitive.vim
+:BCommits [LOG_OPTS] 当前Buffer中的
+%
+<vim-fzf>
+:Snippets UltiSnips插件
