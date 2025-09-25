@@ -29,3 +29,12 @@ Ctrl+r redo
 %
 <vim> 开始visual selection
 v 字符选择 V 行选择 Ctrl+v 块选择
+%
+Vundle在.vimrc中添加Plugin，运行vim +PluginInstall +qall
+vim-plug更现代，Vundle老了
+%
+<vim>主题可以访问vimcolorschemes.com/i/trending查看
+%
+<vim>常用的插件有：
+- junegunn/fzf.vim
+- itchyny/lightline.vim
