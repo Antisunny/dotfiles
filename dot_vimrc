@@ -23,6 +23,11 @@ call vundle#begin()
   Plugin 'folke/tokyonight.nvim'
   "" 自动白天黑夜模式
   Plugin 'nburns/vim-auto-light-dark'
+  "" statusline
+  Plugin 'itchyny/lightline.vim'
+  "" fzf功能
+  Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plugin 'junegunn/fzf.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -69,6 +74,6 @@ set guifont=Google\ Sans\ Code:h13
 set linespace=5
 
 "" 选项卡
-set showtabline=2
+set showtabline=2 " 永久显示tabline
 
 " vim: ft=vim tabstop=4 shiftwidth=4 expandtab
