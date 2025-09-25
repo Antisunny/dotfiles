@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+# install via Vundle
+# vimrc: hash: {{ include ( joinPath .chezmoi.sourceDir "dot_vimrc" ) | sha256sum }}
+vim +PlugInstall +qall
+
+# vim: ft=go-template
