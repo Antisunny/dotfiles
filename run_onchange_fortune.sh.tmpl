@@ -5,5 +5,3 @@
 # {{ base $file }} hash: {{ include $file | sha256sum }}
 {{ end }}
 strfile -i -r -s "$HOME/.local/share/fortune/merged" "$HOME/.local/share/fortune/merged.dat"
-
-# vim: ft=go-template

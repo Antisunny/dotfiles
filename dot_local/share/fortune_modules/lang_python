@@ -27,4 +27,3 @@ python 用pydantic简化数据验证和设置
 python 用ruff格式化代码
 %
 用loguru代替logging用于日志记录
-%

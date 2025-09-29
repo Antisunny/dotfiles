@@ -1,17 +1,9 @@
 {
     "files.associations": {
-        "**/dot_local/share/fortune_modules/*": "plaintext",
-        // "**/*.tmpl": "go-template",
-        "**/dot_vimrc": "Vimscript",
-        "**/dot_zshrc": "shellscript",
         "**/*.sh.tmpl": "shellscript",
         "**/*.zsh.tmpl": "shellscript",
-    },
-    "go-template.languages": [
-        "shellScript",
-        "Vimscript",
-    ],
-    "go-template.patterns": [
-        "**/*.{sh,zsh}.tmpl",
-    ],
+        "**/dot_local/share/fortune_modules/*": "plaintext",
+        "**/dot_vimrc": "Vimscript",
+        "**/dot_zshrc": "shellscript"
+    }
 }

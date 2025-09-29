@@ -37,3 +37,6 @@ alias pwgen32="/usr/local/bin/pwgen -cnyBs -C 32 1"
 # curl wget
 alias xh="xh --style=fruity --print=Hh"
 alias aria="aria2c -x 8 -s 8"
+
+# fzf
+alias fzf1="fzf --preview 'bat --style=numbers --color=always {}'"
