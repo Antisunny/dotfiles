@@ -66,4 +66,9 @@ clipboard-write = allow
 copy-on-select = false
 clipboard-trim-trailing-spaces = false
 
+# Splits
+unfocused-split-opacity = 0.95
+unfocused-split-fill = "#eceff4"
+split-divider-color = "#7a7a7a"
+
 # vim: fp=toml
