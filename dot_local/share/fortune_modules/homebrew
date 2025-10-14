@@ -1,0 +1,11 @@
+清除旧版本
+brew cleanup --prune=all
+%
+查看哪些使用了openssl
+brew uses --installed openssl
+%
+查看ruby依赖哪些库
+brew deps --tree ruby
+%
+检查
+brew doctor
