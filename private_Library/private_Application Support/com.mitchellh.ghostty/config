@@ -49,6 +49,10 @@ window-new-tab-position = end
 background-opacity = 0.96
 background-blur = 25
 
+# macOS特有
+macos-titlebar-style = hidden
+macos-icon = xray
+
 # 窗口间距
 window-padding-y = 2,4
 window-padding-x = 4,4
@@ -56,8 +60,8 @@ window-padding-balance = true
 
 # 鼠标样式
 cursor-style = block
-cursor-color = FF2600
-cursor-text = FA2600
+cursor-color = "#FF2600"
+cursor-text = "#FA2600"
 
 # 剪贴板
 clipboard-read = allow
@@ -65,10 +69,11 @@ clipboard-write = allow
 # false表示用自动剪贴板，true表示用选择剪贴板
 copy-on-select = false
 clipboard-trim-trailing-spaces = false
+right-click-action = copy-or-paste
 
 # Splits
-unfocused-split-opacity = 0.95
-unfocused-split-fill = "#eceff4"
+unfocused-split-opacity = 0.8
+unfocused-split-fill = "#fac400"
 split-divider-color = "#7a7a7a"
 
 # vim: fp=toml
