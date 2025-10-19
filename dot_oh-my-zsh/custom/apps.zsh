@@ -10,3 +10,5 @@ alias edge_wo_cors='open -na "Microsoft Edge" --user-data-dir=/tmp/temporary-chr
 alias vscode='open -a "Visual Studio Code"'
 
 alias wechat='nohup /Applications/WeChat.app/Contents/MacOS/WeChat &>/dev/null &'
+
+alias microsoft-updater='echo "更新Microsoft Office" && open -a "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app"'
