@@ -27,3 +27,11 @@ python 用pydantic简化数据验证和设置
 python 用ruff格式化代码
 %
 用loguru代替logging用于日志记录
+%
+macOS自带的pythpn3.9的位置是
+/Applications/Xcode.app/Contents/Developer/usr/bin/python3
+/usr/bin/python3
+/usr/bin/pip3
+%
+macOS自带的pythpn3.9的包位置是
+~/Library/Python/3.9/lib/python/site-packages
