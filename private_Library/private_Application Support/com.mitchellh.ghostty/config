@@ -8,10 +8,10 @@
 # 主题
 # https://ghostty.org/docs/features/theme
 window-theme = system
-theme = light:Monokai Pro Light,dark:Monokai Pro
-# theme = light:catppuccin-latte,dark:catppuccin-mocha
-# theme = light:GruvboxLight,dark:GruvboxDark
-# theme = light:tokyonight-day,dark:tokyonight-moon
+# theme = light:Monokai Pro Light,dark:Monokai Pro Machine
+theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+# theme = light:Gruvbox Light,dark:Gruvbox Dark
+# theme = light:TokyoNight Day,dark:TokyoNight Moon
 
 # 字体
 font-family = "Google Sans Code"
