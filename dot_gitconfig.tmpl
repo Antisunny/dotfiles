@@ -1,0 +1,121 @@
+[color]
+  ui = always
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+
+[color "branch"]
+  current = green bold
+  local = blue
+  remote = magenta italic
+  plain = normal
+
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = red
+
+[user]
+  # useConfigOnly=true表示必须先配置user.name user.email，否则commit会报错
+  useConfigOnly = true
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIND0mQCBObckG/zgawPbturDXbFjChTWXC27KQPyRaJ0
+  name = Ryan Lincs
+  email = ryan.lincs@outlook.com
+
+[init]
+  defaultBranch = main
+
+[core]
+  excludesfile = ~/.gitignore
+
+  quotepath = false
+  longpaths = true
+  autocrlf = input
+  trustctime = false
+  ignorecase = true
+  untrackedcache = true
+  pager = delta --line-numbers -s
+
+[push]
+  default = current
+
+
+[credential]
+  helper = store
+
+[http]
+  postBuffer = 655360000
+
+[diff "text"]
+  textconv = cat
+
+[mergetool]
+  keepBackup = false
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+[lfs]
+  concurrenttransfers = 32
+
+[merge "lfs-text"]
+  driver = git lfs merge-driver --ancestor %O --current %A --other %B --marker-size %L --output %A --program 'git merge-file --stdout --marker-size=%%L %%A %%O %%B >%%D'
+
+[rebase]
+  backend = merge
+
+[protocol]
+  version = 1
+
+[pull]
+  rebase = false
+
+[safe]
+  directory = *
+
+[alias]
+  st = status -sb
+
+  co = checkout
+  br = branch
+  sw = switch
+
+  ci = commit
+
+  rb = rebase
+  mg = merge
+
+  df = difftool
+  alias = config get --all --show-names --regexp '^alias\\.'
+
+  # http://www.jukie.net/bart/blog/pimping-out-git-log
+  logg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[difftool]
+  prompt = false
+
+[diff]
+  tool = vimdiff
+
+[difftool "vimdiff"]
+  path = /usr/local/bin/vimdiff
+
+# 1Password
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  {{- if eq .chezmoi.os "darwin" }}
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+  {{- else if eq .chezmoi.os "windows" }}
+  program = "C:\\Program Files\\1Password\\op-ssh-sign.exe"
+  {{- end }}
+
+[commit]
+  gpgsign = true
+
+# vim: ft=toml st=2
