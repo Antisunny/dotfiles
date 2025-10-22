@@ -1,0 +1,5 @@
+{{- if eq .chezmoi.os "darwin" -}}
+export ZELLIJ_PLUGIN_DIR="$HOME/Library/Application Support/org.Zellij-Contributors.Zellij/plugins"
+{{- else if eq .chezmoi.os "linux" -}}
+export ZELLIJ_PLUGIN_DIR="$HOME/.local/share/zellij/plugins"
+{{- end -}}
