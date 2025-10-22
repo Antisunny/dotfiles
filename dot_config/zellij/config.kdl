@@ -262,9 +262,6 @@ plugins {
     }
 }
 
-// Plugins to load in the background when a new session starts
-// eg. "file:/path/to/my-plugin.wasm"
-// eg. "https://example.com/my-plugin.wasm"
 load_plugins {
 }
 
@@ -277,16 +274,16 @@ web_client {
 simplified_ui true
 
 // 主题，默认是"dracula"
-theme "catppuccin-macchiato"
+theme "catppuccin-latte"
 
 // 默认输入模式是"normal"
 // default_mode "locked"
 
 // 打开新pane时使用的默认shell，默认使用$SHELL
-// default_shell "fish"
+// default_shell "zsh"
 
 // 打开新pane时使用的默认工作目录
-// default_cwd "/tmp"
+default_cwd "~"
 
 // 启动时使用的布局，默认是"default"
 // default_layout "compact"
@@ -308,8 +305,10 @@ mirror_session true
 
 on_force_close "detach"
 
+// 回滚行数
 scroll_buffer_size 10000000000
 
+// 选中即拷贝
 copy_on_select true
 
 
