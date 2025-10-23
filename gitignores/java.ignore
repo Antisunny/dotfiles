@@ -1,5 +1,7 @@
-# Java 编译生成的文件
+# Java编译后文件
 *.class
+
+# Java的归档文件
 *.jar
 *.war
 *.ear

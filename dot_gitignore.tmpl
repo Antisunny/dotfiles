@@ -1,4 +1,13 @@
 {{- $files := glob (joinPath .chezmoi.sourceDir "gitignores/*") -}}
-{{- range $i, $file := $files -}}
-    {{- include $file }}
+{{- $allLines := list -}}
+{{- range $file := $files -}}
+    {{- $lines := splitList "\n" (include $file) -}}
+    {{- $allLines = concat $allLines $lines -}}
+{{- end -}}
+{{- $allLines := $allLines | uniq | sortAlpha -}}
+{{- range $line := $allLines -}}
+    {{- if and (not (regexMatch "^#"  $line)) (ne "" $line) -}}
+        {{- $line }}
 {{ end -}}
+
+{{- end -}}
