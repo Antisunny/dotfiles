@@ -1,0 +1,11 @@
+# Java 编译生成的文件
+*.class
+*.jar
+*.war
+*.ear
+
+# 编译输出目录
+target/
+
+# 可执行文件目录
+bin/

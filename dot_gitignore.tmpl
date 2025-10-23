@@ -1,0 +1,4 @@
+{{- $files := glob (joinPath .chezmoi.sourceDir "gitignores/*") -}}
+{{- range $i, $file := $files -}}
+    {{- include $file }}
+{{ end -}}

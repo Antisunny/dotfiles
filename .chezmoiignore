@@ -1,2 +1,3 @@
 .oh-my-zsh/custom/notion.zsh
 .local/share/fortune_modules/
+gitignores/

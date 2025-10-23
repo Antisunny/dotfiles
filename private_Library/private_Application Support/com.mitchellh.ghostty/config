@@ -7,6 +7,7 @@
 
 # 主题
 # https://ghostty.org/docs/features/theme
+# ll /Applications/Ghostty.app/Contents/Resources/ghostty/themes
 window-theme = system
 # theme = light:Monokai Pro Light,dark:Monokai Pro Machine
 theme = light:Catppuccin Latte,dark:Catppuccin Mocha

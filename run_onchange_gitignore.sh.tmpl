@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+{{- $files := glob (joinPath .chezmoi.sourceDir "gitignores/*") -}}
+{{ range $file := $files }}
+# {{ base $file }} hash: {{ include $file | sha256sum }}
+{{ end }}
+cat "$HOME/.gitignore" | sort | grep -v -E -e "^$" | grep -v -E -e "^#.*" | uniq > "$HOME/.gitignore"
