@@ -1,9 +1,10 @@
 {
     "files.associations": {
-        "**/*.sh.tmpl": "shellscript",
         "**/*.zsh.tmpl": "shellscript",
         "**/dot_local/share/fortune_modules/*": "plaintext",
         "**/dot_vimrc": "Vimscript",
-        "**/dot_zshrc": "shellscript"
+        "**/dot_zshrc": "shellscript",
+        "**/*.ignore": "ignore",
+        "**/*.toml.tmpl": "toml"
     }
 }

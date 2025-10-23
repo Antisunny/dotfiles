@@ -1,0 +1,236 @@
+{
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[perl]": {
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.useTabStops": true
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "[r]": {
+        "editor.defaultFormatter": "Mikhail-Arkhipov.r"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "accessibility.signals.taskCompleted": {
+        "sound": "on"
+    },
+    "accessibility.signals.taskFailed": {
+        "sound": "on"
+    },
+    "accessibility.signals.terminalBell": {
+        "sound": "on"
+    },
+    "breadcrumbs.enabled": true,
+    "chat.agent.enabled": false,
+    "debug.confirmOnExit": "always",
+    "debug.terminal.clearBeforeReusing": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.accessibilitySupport": "off",
+    "editor.autoIndentOnPaste": true,
+    "editor.codeLensFontFamily": "\"JetBrains Maple Mono\", 'SF Mono', Menlo, monospace",
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorStyle": "line",
+    "editor.cursorSurroundingLines": 3,
+    "editor.cursorSurroundingLinesStyle": "all",
+    "editor.cursorWidth": 3,
+    "editor.defaultColorDecorators": "auto",
+    "editor.dragAndDrop": false,
+    "editor.experimental.asyncTokenization": true,
+    "editor.experimental.asyncTokenizationLogging": true,
+    "editor.experimental.asyncTokenizationVerification": true,
+    "editor.fontFamily": "\"Google Sans Code\", \"IBM Plex Mono\", \"JetBrains Maple Mono\", \"SF Mono\", \"JetBrains Mono\", \"PingFang SC\", monospace",
+    "editor.fontLigatures": false,
+    "editor.fontSize": 13,
+    "editor.fontWeight": "normal",
+    "editor.formatOnType": true,
+    "editor.glyphMargin": false,
+    "editor.lineHeight": 1.5,
+    "editor.padding.bottom": 10,
+    "editor.padding.top": 10,
+    "editor.renderLineHighlight": "all",
+    "editor.renderLineHighlightOnlyWhenFocus": true,
+    "editor.renderWhitespace": "all",
+    "editor.roundedSelection": false,
+    "editor.scrollBeyondLastLine": false,
+    "editor.suggest.preview": true,
+    "editor.tokenColorCustomizations": {
+        "[Atom One Dark]": {
+            "comments": {
+                "fontStyle": "",
+                "foreground": "#519d58"
+            }
+        },
+        "[Atom One Light]": {
+            "comments": {
+                "fontStyle": "",
+                "foreground": "#e99120"
+            }
+        }
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.includeComments": true,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.wordWrap": "on",
+    "evenBetterToml.formatter.indentEntries": true,
+    "explorer.compactFolders": false,
+    "explorer.copyRelativePathSeparator": "/",
+    "files.autoGuessEncoding": true,
+    "files.autoSave": "afterDelay",
+    "files.restoreUndoStack": false,
+    "files.trimTrailingWhitespace": true,
+    "git.closeDiffOnOperation": true,
+    "git.confirmSync": false,
+    "git.ignoreRebaseWarning": true,
+    "js/ts.implicitProjectConfig.checkJs": true,
+    "jupyter.disableJupyterAutoStart": true,
+    "jupyter.enableExtendedPythonKernelCompletions": true,
+    "jupyter.exportWithOutputEnabled": true,
+    "jupyter.generateSVGPlots": true,
+    "jupyter.interactiveWindow.textEditor.magicCommandsAsComments": true,
+    "jupyter.jupyterServerType": "local",
+    "jupyter.logKernelOutputSeparately": true,
+    "markdown-preview-github-styles.colorTheme": "system",
+    "markdown.preview.fontSize": 12,
+    "markdown.preview.lineHeight": 1.2,
+    "markdown.preview.markEditorSelection": false,
+    "material-icon-theme.showUpdateMessage": true,
+    "notebook.cellFocusIndicator": "border",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "notebook.cellToolbarVisibility": "hover",
+    "notebook.consolidatedRunButton": true,
+    "notebook.dragAndDropEnabled": false,
+    "notebook.editorOptionsCustomizations": {
+        "editor.selectionClipboard": true,
+        "editor.selectionHighlight": true
+    },
+    "notebook.globalToolbar": false,
+    "notebook.lineNumbers": "on",
+    "notebook.outline.showCodeCells": true,
+    "notebook.output.textLineLimit": 500,
+    "php.validate.executablePath": "/usr/local/bin/php",
+    "prettier.printWidth": 120,
+    "prettier.tabWidth": 4,
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "python.globalModuleInstallation": true,
+    "python.languageServer": "Pylance",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "scm.alwaysShowRepositories": true,
+    "scm.compactFolders": false,
+    "scm.providerCountBadge": "visible",
+    "search.defaultViewMode": "tree",
+    "search.globalFindClipboard": true,
+    "search.searchEditor.reusePriorSearchConfiguration": true,
+    "search.showLineNumbers": true,
+    "security.workspace.trust.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "svelte.enable-ts-plugin": true,
+    "terminal.explorerKind": "both",
+    "terminal.integrated.bellDuration": 600,
+    "terminal.integrated.confirmOnExit": "hasChildProcesses",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorStyleInactive": "line",
+    "terminal.integrated.cursorWidth": 3,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.enableFileLinks": "notRemote",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "terminal.integrated.enableVisualBell": true,
+    "terminal.integrated.focusAfterRun": "terminal",
+    "terminal.integrated.fontFamily": "\"Google Sans Code\", \"IBM Plex Mono\", \"JetBrains Maple Mono\", 'SF Mono', 'Helvetica Neue', monospace",
+    "terminal.integrated.fontLigatures.featureSettings": "\"calt\" off, \"liga\" off",
+    "terminal.integrated.fontWeightBold": "normal",
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.hideOnStartup": "whenEmpty",
+    "terminal.integrated.ignoreBracketedPasteMode": true,
+    "terminal.integrated.letterSpacing": 0.5,
+    "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.localEchoStyle": "dim",
+    "terminal.integrated.minimumContrastRatio": 7,
+    "terminal.integrated.mouseWheelScrollSensitivity": 5,
+    "terminal.integrated.profiles.windows": {
+        "Bash 5.1.16": {
+            "args": [
+                "--login",
+                "--pretty-print"
+            ],
+            "color": "terminal.ansiRed",
+            "icon": "terminal-bash",
+            "path": "/usr/local/bin/bash"
+        }
+    },
+    "terminal.integrated.rightClickBehavior": "nothing",
+    "terminal.integrated.scrollback": 10000000,
+    "terminal.integrated.shellIntegration.enabled": true,
+    "terminal.integrated.shellIntegration.history": 100000000,
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.splitCwd": "workspaceRoot",
+    "terminal.integrated.suggest.enabled": true,
+    "terminal.integrated.suggest.inlineSuggestion": "alwaysOnTopExceptExactMatch",
+    "terminal.integrated.tabs.focusMode": "singleClick",
+    "terminal.integrated.tabs.hideCondition": "singleGroup",
+    "terminal.integrated.tabs.separator": "|",
+    "terminal.integrated.tabStopWidth": 4,
+    "terminal.integrated.unicodeVersion": "11",
+    "terminal.integrated.useWslProfiles": false,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]",
+        "MARK",
+        "NOTE"
+    ],
+    "todo-tree.highlights.useColourScheme": true,
+    "todo-tree.tree.showCountsInTree": true,
+    "vim.disableExtension": true,
+    "window.autoDetectColorScheme": true,
+    "window.commandCenter": false,
+    "window.nativeTabs": true,
+    "window.newWindowProfile": "Default",
+    "window.systemColorTheme": "auto",
+    "window.titleBarStyle": "native",
+    "workbench.colorCustomizations": {
+        "[Atom One Dark]": {
+            "editor.lineHighlightBackground": "#484c51",
+            "editor.selectionBackground": "#4a4a4a"
+        },
+        "[Atom One Light]": {
+            "editor.lineHighlightBackground": "#d1e8ff",
+            "editor.selectionBackground": "#c6daed"
+        }
+    },
+    "workbench.colorTheme": "Monokai",
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.restoreViewState": false,
+    "workbench.editor.revealIfOpen": true,
+    "workbench.iconTheme": "vscode-icons-mac",
+    "workbench.layoutControl.enabled": false,
+    "workbench.preferredDarkColorTheme": "MacOS Modern Dark - Xcode Modern",
+    "workbench.preferredLightColorTheme": "GitHub Light",
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.tree.renderIndentGuides": "onHover"
+}
