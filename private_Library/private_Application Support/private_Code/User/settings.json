@@ -17,9 +17,6 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "[r]": {
-        "editor.defaultFormatter": "Mikhail-Arkhipov.r"
-    },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -165,17 +162,6 @@
     "terminal.integrated.localEchoStyle": "dim",
     "terminal.integrated.minimumContrastRatio": 7,
     "terminal.integrated.mouseWheelScrollSensitivity": 5,
-    "terminal.integrated.profiles.windows": {
-        "Bash 5.1.16": {
-            "args": [
-                "--login",
-                "--pretty-print"
-            ],
-            "color": "terminal.ansiRed",
-            "icon": "terminal-bash",
-            "path": "/usr/local/bin/bash"
-        }
-    },
     "terminal.integrated.rightClickBehavior": "nothing",
     "terminal.integrated.scrollback": 10000000,
     "terminal.integrated.shellIntegration.enabled": true,
