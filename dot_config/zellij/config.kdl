@@ -280,13 +280,13 @@ theme "catppuccin-latte"
 // default_mode "locked"
 
 // 打开新pane时使用的默认shell，默认使用$SHELL
-// default_shell "zsh"
+default_shell "zsh"
 
 // 打开新pane时使用的默认工作目录
 default_cwd "~"
 
 // 启动时使用的布局，默认是"default"
-// default_layout "compact"
+default_layout "compact"
 
 // 从哪里加载布局
 // layout_dir "/tmp"
@@ -298,6 +298,7 @@ default_cwd "~"
 mouse_mode true
 
 // 是否显示窗格边框
+// zellij ac toggle-pane-frames
 pane_frames false
 
 // 多用户共享时，是否镜像光标；false表示每个用户有自己的光标
@@ -313,12 +314,20 @@ copy_on_select true
 
 
 // 默认使用的session
-// session_name "My singleton session"
-// attach_to_session true
+session_name "circular-river"
+attach_to_session true
 
 styled_underlines true
+
+// 将session的元数据缓存到磁盘
 disable_session_metadata false
+// 是否在保存session元数据时同时序列化pane的视图，默认是false
+serialize_pane_viewport true
+
+// 是否在启动时显示提示和发行说明
 show_startup_tips false
+
+// 是否在更新后首次启动时显示发行说明
 show_release_notes true
 
 // 是否开启鼠标悬停效果和窗格分组功能，默认是开启的
