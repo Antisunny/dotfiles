@@ -12,7 +12,7 @@ dust是比du更好用的选择
 %
 fd是比find更好用的选择
 %
-使用nq来命令队列
+使用nq来命令队列，替代nohup
 https://github.com/leahneukirchen/nq
 %
 用mosh，SSH连接不断线
