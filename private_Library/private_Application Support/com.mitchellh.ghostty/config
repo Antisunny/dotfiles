@@ -28,7 +28,7 @@ bold-is-bright = false
 font-style-bold = true
 
 # 更新策略
-auto-update = download
+auto-update = check
 auto-update-channel = stable
 
 # 回滚
