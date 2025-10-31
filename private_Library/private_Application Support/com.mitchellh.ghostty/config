@@ -22,7 +22,7 @@ adjust-cell-height = 20%
 
 # 默认字体比较细
 font-thicken = true
-font-thicken-strength = 50
+font-thicken-strength = 80
 
 bold-is-bright = false
 font-style-bold = true
@@ -40,8 +40,8 @@ quick-terminal-position = center
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 
 # 窗口设置
-window-height = 30
-window-width = 120
+window-height = 35
+window-width = 160
 window-save-state = always
 window-new-tab-position = end
 
@@ -49,8 +49,10 @@ background-opacity = 0.96
 background-blur = 25
 
 # macOS特有
-macos-titlebar-style = hidden
-macos-icon = xray
+macos-window-buttons = visible
+macos-titlebar-style = tabs
+macos-titlebar-proxy-icon = visible
+macos-icon = paper
 
 # 窗口间距
 window-padding-y = 2,4
