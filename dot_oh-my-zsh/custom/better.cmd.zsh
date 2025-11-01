@@ -1,7 +1,8 @@
 ## eza: better ls
 alias l="command ls" # or /bin/ls
 alias ls=eza
-alias ll="ls -lh --group-directories-first -s modified --color-scale modified --color-scale-mode gradient --time-style relative -m"
+alias ll="eza -lh --group-directories-first -s modified --color-scale modified --color-scale-mode gradient --time-style relative -m"
+# -m 显示modified列，-u显示accessed列，-U显示created列
 alias la='ll -a'
 
 ## dust: better du
