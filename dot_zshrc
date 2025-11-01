@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # ZSH_THEME="af-magic"
-ZSH_THEME="wezm+"
+ZSH_THEME="simple" # set by `omz`
 
 # CASE_SENSITIVE="true"
 HYPHEN_INSENSITIVE="true"
@@ -43,5 +43,8 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
 # zoxide
 eval "$(zoxide init zsh --cmd cd)"
+
+# gnupg
+export GPG_TTY=$(tty)
 
 # vim: ft=zsh
