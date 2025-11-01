@@ -9,13 +9,18 @@
 # https://ghostty.org/docs/features/theme
 # ll /Applications/Ghostty.app/Contents/Resources/ghostty/themes
 window-theme = system
-# theme = light:Monokai Pro Light,dark:Monokai Pro Machine
-theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+theme = light:Monokai Pro Light,dark:Monokai Pro Machine
+# theme = light:Catppuccin Latte,dark:Catppuccin Mocha
 # theme = light:Gruvbox Light,dark:Gruvbox Dark
 # theme = light:TokyoNight Day,dark:TokyoNight Moon
 
+# 样式
+adjust-underline-position = 20%
+adjust-underline-thickness = 30%
+adjust-cursor-height = -50%
+
 # 字体
-font-family = "Google Sans Code"
+font-family = "0xProto"
 font-size = 12
 font-feature = -calt, -liga, -dlig
 adjust-cell-height = 20%
@@ -24,8 +29,7 @@ adjust-cell-height = 20%
 font-thicken = true
 font-thicken-strength = 80
 
-bold-is-bright = false
-font-style-bold = true
+font-synthetic-style = "bold,italic,bold-italic"
 
 # 更新策略
 auto-update = check
